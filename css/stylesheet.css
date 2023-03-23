@@ -3,6 +3,7 @@
 /* No media query since this is the default CSS */
 
 /* Basic page styling */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Raleway:wght@400;600;900&display=swap');
 :root {
     /* These are global variables that you can use in your CSS */
     --black:black;
@@ -11,8 +12,8 @@
     --light-grey:#999;
     --white:white;
     --accent-colour:#85946d;
-    --headline-font:eloquent-jf-small-caps-pro, serif;
-    --body-font:nunito-sans, sans-serif;
+    --headline-font:'Raleway', sans-serif;
+    --body-font:'Merriweather', serif;
     --horizontal-shift:6px;
     --section-padding-top:120px;
     }
@@ -26,6 +27,16 @@
 body {
     font-family: var(--body-font);
     }
+    #introduction h1 {
+        font-weight: 400;
+    }
+    .MMDD {
+        font-weight: 900;
+    }
+    .passionate {
+        font-weight: 900;
+        font-style: italic;
+    }
     h1, h2, h3, h4, h5, h6 {
     font-family: var(--headline-font);
     }
@@ -34,7 +45,7 @@ body {
     margin-bottom: 3rem;
     }
     h2 {
-    font-size: calc(32px + (48 - 32) * (100vw - 400px) / (1800 - 400));
+    font-size: calc(30px + (48 - 32) * (100vw - 400px) / (1800 - 400));
     margin-bottom: 1.5rem;
     }
     h3 {
@@ -50,15 +61,13 @@ a {
     text-decoration: none;
     color: var(--black);
     }
-    a:visited {
-    color: var(--black);
-    }
     img {
     width:100%;
     }
     .btn {
     background-color: var(--black);
     border: none;
+    border-radius: 8px;
     color: var(--white);
     padding: 15px 32px;
     text-align: center;
@@ -69,7 +78,27 @@ a {
     }
     .btn:hover {
     background-color: var(--accent-colour);
-    color:var(--black);
+    color:var(--white);
+    padding-left:calc(32px + var(--horizontal-shift));
+    }
+
+    .btn_fullwork {
+    background-color: var(--black);
+    margin: 0 auto;
+    border: none;
+    border-radius: 8px;
+    color: var(--white);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: calc(16px + (20 - 16) * (100vw - 400px) / (1800 - 400));
+    width: fit-content;
+    }
+
+    .btn_fullwork:hover {
+    background-color: var(--accent-colour);
+    color:var(--white);
     padding-left:calc(32px + var(--horizontal-shift));
     }
 
@@ -82,14 +111,14 @@ a {
     color:var(--white);
     }
     .inverted-colours a:visited {
-    color:var(--white);
+    color:var(--black);
     }
     .inverted-colours .btn {
     color:var(--black);
     background:var(--white);
     }
     .inverted-colours .btn:hover {
-    color:var(--black);
+    color:var(--white);
     background:var(--accent-colour);
     }
 
@@ -102,7 +131,7 @@ header {
     nav {
     overflow: hidden;
     background: var(--white);
-    height: 60px;
+    height: 80px;
     }
     nav ul {
     width: 100%;
@@ -126,12 +155,14 @@ nav ul {
     nav ul li a {
     text-decoration: none;
     color: var(--black);
-    margin: 20px;
+    margin: 10px;
+    padding: 10px 20px 10px 20px;
     }
     nav ul li a:hover {
     text-decoration: none;
-    color: var(--dark-grey);
+    color: var(--white);
     background: var(--accent-colour);
+    border-radius: 8px;
     }
     #logo {
         margin-right: auto;
@@ -139,7 +170,7 @@ nav ul {
         text-align: left;
         }
         #logo img {
-        height: 2rem;
+        height: 2.5rem;
         }
         #menu-icon {
         margin-left: auto;
@@ -161,9 +192,22 @@ nav ul {
     }
 
 /* Styling for the Portfolio Section */
+#portfolio h3 {
+    margin-top: 8px;
+}
+
+#portfolio img {
+    border-radius: 8px;
+}
+
 #portfolio a:hover h3,
 #portfolio a:hover p {
 padding-left:var(--horizontal-shift);
+}
+
+#portfolio img:hover {
+    opacity: 0.7;
+    box-shadow: 5px 5px 3px var(--mid-grey);
 }
 
 /* Styling for the Sections */
@@ -206,6 +250,7 @@ section {
         grid-template-columns:1fr 1fr;
         grid-gap:50px;
         margin-bottom:3rem;
+        margin-top: 3rem;
         }
 
 /* Styling for the About */
@@ -219,6 +264,11 @@ section {
     grid-column: 1/-1;
     }
 
+/* iFrame videos styling */
+.single-video {
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
 
 /* Small devices (i.e. tablets in portrait) */
 @media (min-width: 600px) {
@@ -250,6 +300,7 @@ section {
     #contact ul {
     display: flex;
     list-style-type: none;
+    margin-top: 1rem;
     margin-bottom:1rem;
     }
     #contact ul li a {

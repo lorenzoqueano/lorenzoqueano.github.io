@@ -8,9 +8,9 @@
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
     />
     <title>Lorenzo Queano</title>
-    <link rel="icon" type="image/png" href="images/lq_logo_black.png" />
+    <link rel="icon" type="image/png" href="images/lq_logo_black.png"/>
     <link rel="stylesheet" href="https://use.typekit.net/ljb3flz.css">
-    <link rel="stylesheet" href="https://use.typekit.net/hvl2phe.css">
+    <!-- <link rel="stylesheet" href="https://use.typekit.net/hvl2phe.css"> -->
     <link rel="stylesheet" href="css/stylesheet.css" />
   </head>
 
@@ -22,7 +22,7 @@
           <ul>
             <li id="logo">
               <a href="index.html#introduction">
-                <img src="images/lq_logo_black.svg" alt="lq letters"/>
+                <img class="logo-img" src="images/lq_logo_black.svg" alt="lq letters in black" onmouseover="hover(this);" onmouseout="hoverOut(this);";/>
               </a>
             </li>
 
@@ -37,8 +37,8 @@
 
       <main>
         <section id="introduction">
-          <h1>Hello <span aria-hidden="true">👋🏼</span>, my name's Lorenzo. I'm a Multimedia designer who's passionate about creating visual and digital designs. </h1>
-          <a class="btn" href="index.html#portfolio">View My Work</a>
+          <h1>Oh hello there <span aria-hidden="true">👋🏼</span> My name's Lorenzo. I'm a <span class="MMDD">Multimedia designer</span> who is <span class="passionate">passionate</span> about creating stunning visual and digital designs. </h1>
+          <a class="btn" href="index.html#portfolio">Check out my recent work</a>
         </section>
 
         <section id="portfolio">
@@ -57,7 +57,7 @@
               </a>
             </div>
 
-            <div>
+            <!-- <div>
               <a href="humbercake.html">
                 <img
                   srcset="images/cake_thumbnail@1x.jpg 400w, images/cake_thumbnail@2x.jpg 800w"
@@ -69,16 +69,16 @@
                   UX/UI Design/Research, Prototyping, User Testing
                 </p>
               </a>
-            </div>
+            </div> -->
 
-            <div class="featured">
+            <div>
               <a href="bpcampaign.html">
                 <img
                   srcset="images/bp_thumbnail@1x.jpg 400w, images/bp_thumbnail@2x.jpg 800w"
                   src="images/bp_thumbnail@1x.jpg"
                   alt="Born Pink Billboard Poster Mockup"
                 />
-                <h3>Multimedia Campaign: Blackpink's "Born Pink"</h3>
+                <h3>Multimedia Campaign: "Born Pink"</h3>
                 <p>
                   Art Direction, Augmented Reality, Video Editing
                 </p>
@@ -117,20 +117,20 @@
         </section>
 
         <section id="about">
-          <img src="images/lq-picture.jpg" alt="Two pictures of myself smiling while doing work on my laptop."/>
+          <img src="images/lq-picture3.jpg" alt="Two pictures of myself smiling while doing work on my laptop."/>
           <h2>I'm a designer currently based in Toronto, Canada.</h2>
           <div class="two-columns">
             <p>
-              I am a talented designer based in Toronto, Canada. Although I started my academic journey at York University 
-              with a BA in Communications, the creative in me was hungry and eager to learn and explore. 
-              With my experience in dance, video editing & social media content creation, I was inspired to further 
-              my education and pursue the Multimedia Design & Development at Humber College.
+              I am an enthusiastic designer based in Toronto, Canada. Although I started my academic journey at York University 
+              with a BA in Communications, the creative in me was hungry and eager to continue learning and exploring. 
+              With previous experience in dance, video editing & social media content creation, I was inspired to 
+              further my education and pursue the Multimedia Design & Development at Humber College.
             </p>
             <p>
               During my time as a student at Humber College, not only was I able to carry over my Communications skills 
-              for collaborative work and learning, I was also able to gain new design skills and knowledge. From video production
-              to UX/UI to motion graphics, I am excited to apply my new set of skills to the industry and create eye-catching and 
-              unique designs.
+              for collaborative work and botn in-person and  online learning, I was also able to gain new design skills and basic coding knowledge. 
+              From video production to UX/UI to motion graphics, I am excited to apply my new set of skills to the industry and create 
+              eye-catching and unique designs.
             </p>
           </div>
 
@@ -190,24 +190,19 @@
           <h2>Let's create together!</h2>
           <p>
             I am currently seeking full time opportunities and I am always open to chat 
-            about anything multimedia design -- from video production to UX/UI to social media.
+            about anything multimedia design — from video production to UX/UI to social media.
           </p>
           <p>Let's get connected!</p>
-          <a class="btn"
-            href="mailto:lorenzo.queano@gmail.com?"
-            >lorenzo.queano@gmail.com</a>
+          <a class="btn" target="_blank" rel="noopener" href="mailto:lorenzo.queano@gmail.com?">lorenzo.queano@gmail.com</a>
             <ul>
               <li>
-                <a href="#"><i class="fa fa-instagram" title="Visit my Instagram"></i></a>
+                <a target="_blank" rel="noopener" href="https://www.instagram.com/designs.lq"><i class="fa fa-instagram" title="Visit my Instagram"></i></a>
               </li>
               <li>
-                <a href="#"><i class="fa fa-linkedin" title="Visit my LinkedIn"></i></a>
+                <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/7orenzo"><i class="fa fa-linkedin" title="Visit my LinkedIn"></i></a>
               </li>
               <li>
-                <a href="#"><i class="fa fa-medium" title="Visit my Medium"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-twitter" title="Visit my Twitter"></i></a>
+                <a target="_blank" rel="noopener" href="https://www.medium.com/@lorenzo.queano"><i class="fa fa-medium" title="Visit my Medium"></i></a>
               </li>
             </ul>
             <p>LQ ©2023</p>
@@ -221,6 +216,17 @@
       src="https://code.jquery.com/jquery-3.6.4.min.js" 
       integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" 
       crossorigin="anonymous">
+    </script>
+    <script>
+      function hover(img)
+      {
+        img.src="images/lq-logo.svg"
+      }
+
+      function hoverOut(img)
+      {
+        img.src="images/lq_logo_black.svg"
+      }
     </script>
     <script type="text/javascript" src="js/script.js"></script>
   </body>
